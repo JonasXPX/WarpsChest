@@ -1,0 +1,6 @@
+name: WarpChest
+main: me.jonasxpx.warpchest.WarpChest
+version: 1.0.1
+commands: 
+    warp:
+    warpchest:
