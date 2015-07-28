@@ -29,9 +29,8 @@ public class WarpChest extends JavaPlugin{
 			((Player)sender).openInventory(Metodos.open());
 			return true;
 		}
-		for(int x = 0; x <= args.length-1; x++){
+		for(int x = 0; x <= args.length-1; x++)
 			cmd = cmd + " " + args[x];
-		}
 		Bukkit.dispatchCommand(sender, "warps "+cmd.replaceFirst(" ", ""));
 		return true;
 	}
@@ -41,15 +40,15 @@ public class WarpChest extends JavaPlugin{
 		public boolean onCommand(CommandSender sender, Command arg1, String arg2,
 				String[] arg3) {
 			if(arg3.length == 0){
-				sender.sendMessage("§m§a-----------------[§6WarpChest§m§a]-----------------");
-				sender.sendMessage("§a /warpchest setlocation (SLOT) - §b Marca a posiçao atual no slot informado");
+				sender.sendMessage("Â§mÂ§a-----------------[Â§6WarpChestÂ§mÂ§a]-----------------");
+				sender.sendMessage("Â§a /warpchest setlocation (SLOT) - Â§b Marca a posiÃ§ao atual no slot informado");
 				return true;
 			}
 			if(arg3.length == 2){
 				if(arg3[0].equalsIgnoreCase("setlocation")){
 					try{
 					Metodos.setLocationTeleport((Player)sender, Integer.parseInt(arg3[1]));
-					}catch(NumberFormatException e){sender.sendMessage("§cUse apenas numeros");}
+					}catch(NumberFormatException e){sender.sendMessage("Â§cUse apenas numeros");}
 					return true;
 				}
 			}
